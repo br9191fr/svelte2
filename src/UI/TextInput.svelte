@@ -43,8 +43,8 @@
 <div class="form-control">
     <label for="{id}">{label}</label>
     {#if controlType === 'textarea' }
-        <textarea rows="{rows}" id="{id}" value={value} on:input />
+        <textarea {rows} {id} {value} on:input />
     {:else}
-        <input type="{type}" id="{id}" value={value} on:input />
+        <input type="{type}" {id} {value} on:input />
     {/if}
 </div>
