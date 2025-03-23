@@ -2,6 +2,8 @@
     import Header from "./UI/Header.svelte";
     import MeetupGrid from "./Meetups/MeetupGrid.svelte";
     import TextInput from "./UI/TextInput.svelte";
+    import Button from "./UI/Button.svelte";
+
 
     let title = '';
     let subtitle = '';
@@ -70,9 +72,10 @@
         <TextInput id="email" label="Email" value="{email}" type="email"
                    on:input={event => (email = event.target.value)}/>
         <TextInput id="description" label="Description" value="{description}" controlType="textarea"
-                   on:input={event => (description = event.target.value)}/>       <div class="form-control">
+                   on:input={event => (description = event.target.value)}/>
+        <div class="form-control">
         </div>
-        <button type="submit">Save</button>
+        <Button type="submit" caption="Save " />
     </form>
     <MeetupGrid meetups={meetups}/>
 </main>
